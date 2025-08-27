@@ -1,0 +1,92 @@
+:root {
+  --primary-color: #4741A6;
+  --secondary-color: #9BBBFC;
+  --accent-color: #F9CE69;
+  --background-color: #F4F6FB;
+  --text-color: #111827;
+  --card-bg: #fff;
+  --card-radius: 20px;
+  --shadow: rgba(0,0,0,0.15);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  border-radius: var(--card-radius);
+  margin: 30px 20px;
+  box-shadow: 0 6px 20px var(--shadow);
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; font-weight: 700; }
+.hero p { font-size: 1.2rem; }
+
+/* Calendar Card */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: 0 6px 18px var(--shadow);
+  padding: 30px 20px;
+  margin: 30px 20px;
+  overflow-x: auto;
+}
+
+.card p {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Calendar Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+.table th, .table td {
+  padding: 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.table thead th {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.table tbody td {
+  background-color: var(--secondary-color);
+  color: #111827;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.table tbody td:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Highlight today's date */
+.table tbody td.today {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .table th, .table td {
+    padding: 8px;
+  }
+}
+
+@media(max-width: 500px) {
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
+}

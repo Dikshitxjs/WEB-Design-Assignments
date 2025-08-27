@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Join / Registration — Cultural & International</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/join.css" />
 </head>
 <body>
   <header class="site-header">
@@ -14,19 +15,24 @@
       <nav class="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="leadership.html">Leadership</a>
-        <a href="committees.html">Committees</a>
-        <a href="chapters.html">Chapters</a>
-        <a href="culture.html">Culture</a>
-        <a href="festivals.html">Festivals</a>
         <a href="events.html">Events</a>
-        <a href="calendar.html">Calendar</a>
-        <a href="events-archive.html">Archive</a>
-        <a href="workshops.html">Workshops</a>
-        <a href="membership.html">Membership</a>
-        <a href="join.html">Join</a>
-        <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
+        <a href="join.html">Join</a>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">More ▼</a>
+          <div class="dropdown-content">
+            <a href="leadership.html">Leadership</a>
+            <a href="committees.html">Committees</a>
+            <a href="chapters.html">Chapters</a>
+            <a href="culture.html">Culture</a>
+            <a href="festivals.html">Festivals</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="events-archive.html">Archive</a>
+            <a href="workshops.html">Workshops</a>
+            <a href="membership.html">Membership</a>
+            <a href="gallery.html">Gallery</a>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -35,28 +41,45 @@
     <section class="hero">
       <div class="container">
         <h1>Join / Registration</h1>
-        <p>Become part of our community.</p>
+        <p>Become part of our vibrant community.</p>
       </div>
     </section>
 
     <section>
       <div class="container">
-        <div class="card"><div class="content">
+        <div class="card join-card">
+          <h2>Register Now</h2>
           <form id="joinForm">
-            <label>Full Name<br/><input id="joinName" type="text" required /></label><br/>
-            <label>Email<br/><input id="joinEmail" type="email" required /></label><br/>
-            <label>Membership Type<br/>
+            <div class="form-group">
+              <input type="text" id="joinName" placeholder=" " required />
+              <label for="joinName">Full Name</label>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="joinEmail" placeholder=" " required />
+              <label for="joinEmail">Email Address</label>
+            </div>
+
+            <div class="form-group">
               <select id="joinType" required>
-                <option value="">Select...</option>
-                <option>Student</option>
-                <option>Volunteer</option>
-                <option>Alumni</option>
+                <option value="">Select Membership Type</option>
+                <option value="student">Student</option>
+                <option value="volunteer">Volunteer</option>
+                <option value="alumni">Alumni</option>
               </select>
-            </label><br/>
+            </div>
+
+            <div class="form-group radio-group">
+              <p>Preferred Engagement:</p>
+              <label><input type="radio" name="engagement" value="events" required> Events</label>
+              <label><input type="radio" name="engagement" value="volunteering"> Volunteering</label>
+              <label><input type="radio" name="engagement" value="both"> Both</label>
+            </div>
+
             <button type="submit" class="btn">Register</button>
+            <p id="joinMsg" class="success-msg">Registration received. Welcome!</p>
           </form>
-          <p id="joinMsg" style="display:none; color:green; margin-top:.5rem;">Registration received. Welcome!</p>
-        </div></div>
+        </div>
       </div>
     </section>
   </main>
@@ -72,4 +95,3 @@
   <script src="assets/js/join.js"></script>
 </body>
 </html>
-

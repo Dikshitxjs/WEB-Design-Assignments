@@ -1,0 +1,150 @@
+:root {
+  --primary-color: #4741A6;
+  --secondary-color: #9BBBFC;
+  --accent-color: #F9CE69;
+  --background-color: #F4F6FB;
+  --text-color: #111827;
+  --card-bg: #fff;
+  --card-radius: 16px;
+  --btn-radius: 12px;
+  --shadow: rgba(0,0,0,0.1);
+  --transition-speed: 0.3s;
+  --muted: #6b7280;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  padding: 120px 20px;
+  text-align: center;
+  border-radius: var(--card-radius);
+  margin: 30px 20px;
+  box-shadow: 0 6px 20px var(--shadow);
+}
+
+.hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 10px; }
+.hero p { font-size: 1.2rem; }
+
+/* Card */
+.join-card {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+/* Form Fields */
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 16px 14px;
+  font-size: 1rem;
+  border-radius: var(--btn-radius);
+  border: 1px solid #ccc;
+  outline: none;
+  background: #fff;
+  transition: all var(--transition-speed);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px var(--shadow);
+}
+
+/* Floating Labels */
+label {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: var(--muted);
+  background: #fff;
+  padding: 0 4px;
+  pointer-events: none;
+  transition: all var(--transition-speed);
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 0.85rem;
+  color: var(--primary-color);
+}
+
+/* Radio Group */
+.radio-group p {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.radio-group label {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.radio-group input {
+  margin-right: 10px;
+}
+
+/* Button */
+button.btn {
+  width: 100%;
+  background-color: var(--accent-color);
+  color: #111;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 14px;
+  border-radius: var(--btn-radius);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+
+button.btn:hover { background-color: #f0b847; transform: scale(1.03); }
+
+/* Success message */
+.success-msg {
+  display: none;
+  color: green;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+/* Footer & Back to top */
+.site-footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 25px 20px;
+  border-radius: var(--card-radius);
+  box-shadow: 0 -4px 12px var(--shadow);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--accent-color);
+  color: #111;
+  border: none;
+  padding: 12px 15px;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 16px var(--shadow);
+  transition: all var(--transition-speed);
+}
+
+.back-to-top:hover { transform: scale(1.1); }

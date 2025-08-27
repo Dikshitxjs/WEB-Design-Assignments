@@ -4,29 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Past Events Archive — Cultural & International</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/events.css" />
 </head>
 <body>
-  <header class="site-header">
+ <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html">Cultural & International</a>
       <button class="menu-toggle" aria-label="Toggle menu">☰</button>
       <nav class="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="leadership.html">Leadership</a>
-        <a href="committees.html">Committees</a>
-        <a href="chapters.html">Chapters</a>
-        <a href="culture.html">Culture</a>
-        <a href="festivals.html">Festivals</a>
         <a href="events.html">Events</a>
-        <a href="calendar.html">Calendar</a>
-        <a href="events-archive.html">Archive</a>
-        <a href="workshops.html">Workshops</a>
-        <a href="membership.html">Membership</a>
-        <a href="join.html">Join</a>
-        <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
+        <a href="join.html">Join</a>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">More ▼</a>
+          <div class="dropdown-content">
+            <a href="leadership.html">Leadership</a>
+            <a href="committees.html">Committees</a>
+            <a href="chapters.html">Chapters</a>
+            <a href="culture.html">Culture</a>
+            <a href="festivals.html">Festivals</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="events-archive.html">Archive</a>
+            <a href="workshops.html">Workshops</a>
+            <a href="membership.html">Membership</a>
+            <a href="gallery.html">Gallery</a>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -39,11 +44,37 @@
       </div>
     </section>
 
-    <section>
-      <div class="container grid grid-3">
-        <article class="card"><div class="content"><h3>International Night 2024</h3><p>Highlights and winners.</p></div></article>
-        <article class="card"><div class="content"><h3>Food Fair 2024</h3><p>Around-the-world cuisine.</p></div></article>
-        <article class="card"><div class="content"><h3>Spring Cultural Week</h3><p>Workshops and talks.</p></div></article>
+    <section class="events-grid">
+      <div class="container grid">
+        <article class="card">
+          <a href="event-detail.html">
+            <img src="assets/images/events/event1.jpg" alt="International Night 2024">
+            <div class="content">
+              <h3>International Night 2024</h3>
+              <p>Highlights and winners.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="event-detail.html">
+            <img src="assets/images/events/event2.jpg" alt="Food Fair 2024">
+            <div class="content">
+              <h3>Food Fair 2024</h3>
+              <p>Around-the-world cuisine.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="event-detail.html">
+            <img src="assets/images/events/event3.jpg" alt="Spring Cultural Week">
+            <div class="content">
+              <h3>Spring Cultural Week</h3>
+              <p>Workshops and talks.</p>
+            </div>
+          </a>
+        </article>
       </div>
     </section>
   </main>
@@ -54,8 +85,7 @@
     </div>
   </footer>
 
-  <button id="backToTop" class="btn back-to-top" aria-label="Back to top">↑</button>
-  <script src="assets/js/main.js"></script>
+  <button id="backToTop" class="btn back-to-top">↑</button>
+  <script src="assets/js/events.js"></script>
 </body>
 </html>
-

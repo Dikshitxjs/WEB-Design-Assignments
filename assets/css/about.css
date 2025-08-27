@@ -1,0 +1,245 @@
+/* ========== VARIABLES ========== */
+:root {
+  --primary-color: #4741A6;
+  --secondary-color: #9BBBFC;
+  --accent-color: #F9CE69;
+  --background-color: #F4F6FB;
+  --text-color: #111827;
+  --card-bg: #fff;
+  --card-radius: 16px;
+  --btn-radius: 12px;
+  --shadow: rgba(0,0,0,0.1);
+  --transition-speed: 0.4s;
+}
+
+/* ========== RESET & BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'SF Pro Display', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ========== HEADER ========== */
+.site-header {
+  background-color: var(--card-bg);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px var(--shadow);
+  border-radius: var(--card-radius);
+}
+
+.site-header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu a {
+  padding: 10px 15px;
+  border-radius: var(--btn-radius);
+  transition: all var(--transition-speed);
+}
+
+.menu a:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: var(--btn-radius);
+  transition: all var(--transition-speed);
+}
+
+.dropbtn:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background-color: var(--card-bg);
+  min-width: 200px;
+  border-radius: var(--card-radius);
+  box-shadow: 0 6px 20px var(--shadow);
+  overflow: hidden;
+  z-index: 500;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--text-color);
+  transition: all var(--transition-speed);
+}
+
+.dropdown-content a:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  padding: 120px 20px;
+  text-align: center;
+  border-radius: var(--card-radius);
+  margin: 30px;
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ========== MAIN CONTENT ========== */
+main section {
+  padding: 60px 20px;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+main p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+main ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 10px;
+}
+
+main ul li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+/* ========== FOOTER ========== */
+.site-footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 40px;
+  border-radius: var(--card-radius);
+  box-shadow: 0 -4px 12px var(--shadow);
+}
+
+/* ========== BACK TO TOP BUTTON ========== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--accent-color);
+  color: #111;
+  border: none;
+  padding: 12px 15px;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 16px var(--shadow);
+  transition: all var(--transition-speed);
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--card-bg);
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding: 20px;
+    border-radius: var(--card-radius);
+    box-shadow: 0 8px 24px var(--shadow);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background-color: var(--secondary-color);
+  }
+}

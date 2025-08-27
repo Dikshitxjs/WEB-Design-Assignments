@@ -1,0 +1,73 @@
+:root {
+  --primary-color: #4741A6;
+  --secondary-color: #9BBBFC;
+  --accent-color: #F9CE69;
+  --background-color: #F4F6FB;
+  --text-color: #111827;
+  --card-bg: #fff;
+  --card-radius: 20px;
+  --shadow: rgba(0,0,0,0.15);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  border-radius: var(--card-radius);
+  margin: 30px 20px;
+  box-shadow: 0 6px 20px var(--shadow);
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; font-weight: 700; }
+.hero p { font-size: 1.2rem; }
+
+/* Grid for Workshop Cards */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 40px 20px;
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: 0 6px 18px var(--shadow);
+  overflow: hidden;
+  text-align: center;
+  padding: 30px 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--shadow);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media(max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 700px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
