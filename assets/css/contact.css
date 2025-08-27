@@ -1,0 +1,5 @@
+.accordion .item { border-bottom: 1px solid var(--border); }
+.accordion .header { display:flex; justify-content:space-between; padding:1rem; cursor:pointer; }
+.accordion .panel { display:none; padding:0 1rem 1rem; }
+.accordion .panel.show { display:block; }
+

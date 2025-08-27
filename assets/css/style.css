@@ -1,0 +1,299 @@
+/* ================= MODERN 2025 THEME ================= */
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;700&display=swap');
+
+/* ================= VARIABLES ================= */
+:root {
+  --primary-color: #4741A6;
+  --secondary-color: #9BBBFC;
+  --accent-color: #F9CE69;
+  --background-color: #F4F6FB;
+  --text-color: #111827;
+  --card-bg: #fff;
+  --card-radius: 16px;
+  --btn-radius: 12px;
+  --shadow: rgba(0,0,0,0.1);
+  --transition-speed: 0.4s;
+}
+
+/* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'SF Pro Display', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ================= HEADER ================= */
+.site-header {
+  background-color: #fff;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.menu a, .dropbtn {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-color);
+  position: relative;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s;
+}
+
+.menu a:hover, .dropbtn:hover {
+  color: var(--primary-color);
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* ================= FIXED DROPDOWN ================= */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  border-radius: var(--card-radius);
+  box-shadow: 0 8px 16px var(--shadow);
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+/* Keep dropdown visible when hovering the button or dropdown itself */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+/* ================= HERO ================= */
+.hero {
+  padding: 6rem 1rem;
+  text-align: center;
+  border-radius: var(--card-radius);
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  color: #fff;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  animation: fadeUp 1.3s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  border-radius: var(--btn-radius);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px var(--shadow);
+}
+
+.btn.ghost {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn.ghost:hover {
+  background: #fff;
+  color: var(--primary-color);
+}
+
+/* ================= CARDS ================= */
+.grid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 25px var(--shadow);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px var(--shadow);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.card a:hover {
+  color: var(--secondary-color);
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
+}
+
+/* ================= BACK TO TOP ================= */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: var(--btn-radius);
+  background: var(--accent-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px var(--shadow);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 900px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    padding: 1rem;
+    border-left: 1px solid var(--secondary-color);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    box-shadow: none;
+  }
+}
